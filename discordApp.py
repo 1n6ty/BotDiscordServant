@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
+import os
 
 Bot = commands.Bot(command_prefix = "%")
 
@@ -54,4 +55,5 @@ async def on_reaction_remove(reaction, user):
 			print("role")
 			await user.remove_roles(roleAdd)
 
-Bot.run(open('Config.txt', 'r').readline())
+token = os.environ.get('BOT_TOKEN')
+Bot.run(str(token))
