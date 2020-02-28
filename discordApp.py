@@ -12,7 +12,7 @@ async def on_ready():
 @Bot.event
 async def on_reaction_add(reaction, user):
 	print(reaction, user)
-	if(reaction.message.author.name == "1n6ty"):
+	if(reaction.message.channel.name == "promise"):
 		print("1n6ty\n")
 		if(str(reaction) == "🧠"):
 			print("brain")
