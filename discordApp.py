@@ -36,25 +36,26 @@ async def on_raw_reaction_add(react):
 async def on_raw_reaction_remove(react):
 	print(react)
 	guild = Bot.get_guild(react.guild_id)
-	channel = discord.utils.get(guild.channels, name = "promise")
-	print("1n6ty\n")
-	if(str(react.emoji) == "🧠"):
-		print("brain")
-		roleAdd = discord.utils.get(guild.roles, name = "Cyber")
-		print("role")
-		await discord.utils.get(guild.members, id = react.user_id).remove_roles(roleAdd)
+	channel = discord.utils.get(guild.channels, name = "💵правила")
+	if(channel.name == "💵правила"):
+		print("1n6ty\n")
+		if(str(react.emoji) == "🧠"):
+			print("brain")
+			roleAdd = discord.utils.get(guild.roles, name = "Cyber")
+			print("role")
+			await discord.utils.get(guild.members, id = react.user_id).remove_roles(roleAdd)
 
-	if(str(react.emoji) == "🤺"):
-		print("run")
-		roleAdd = discord.utils.get(guild.roles, name = "Sports")
-		print("role")
-		await discord.utils.get(guild.members, id = react.user_id).remove_roles(roleAdd)
+		if(str(react.emoji) == "🤺"):
+			print("run")
+			roleAdd = discord.utils.get(guild.roles, name = "Sports")
+			print("role")
+			await discord.utils.get(guild.members, id = react.user_id).remove_roles(roleAdd)
 
-	if(str(react.emoji) == "😋"):
-		print("run")
-		roleAdd = discord.utils.get(guild.roles, name = "Stream")
-		print("role")
-		await discord.utils.get(guild.members, id = react.user_id).remove_roles(roleAdd)
-
+		if(str(react.emoji) == "😋"):
+			print("run")
+			roleAdd = discord.utils.get(guild.roles, name = "Stream")
+			print("role")
+			await discord.utils.get(guild.members, id = react.user_id).remove_roles(roleAdd)
+			
 token = os.environ.get('BOT_TOKEN')
 Bot.run(str(token))
